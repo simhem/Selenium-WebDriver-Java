@@ -27,10 +27,10 @@
  */
 package com.neotys.selenium.proxies;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.*;
+import org.openqa.selenium.internal.WrapsDriver;
 
-public interface NLWebDriver extends WebDriver, CustomProxyConfig, TransactionModifier, JavascriptExecutor, TakesScreenshot {
+public interface NLWebDriver extends WebDriver, CustomProxyConfig, TransactionModifier, JavascriptExecutor, TakesScreenshot, HasCapabilities, WrapsDriver {
 
 }
+

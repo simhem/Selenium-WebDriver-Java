@@ -27,8 +27,9 @@
  */
 package com.neotys.selenium.proxies;
 
+import org.openqa.selenium.HasCapabilities;
 import org.openqa.selenium.interactions.HasInputDevices;
 
-public interface NLHasInputDeviceWebDriver extends NLWebDriver, HasInputDevices {
+public interface NLHasInputDeviceWebDriver extends NLWebDriver, HasInputDevices, HasCapabilities {
 
 }
