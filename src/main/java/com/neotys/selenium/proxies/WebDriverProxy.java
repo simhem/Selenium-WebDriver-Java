@@ -112,9 +112,11 @@ public class WebDriverProxy {
         final ProxyFactory factory = new ProxyFactory();
         if(webDriver instanceof RemoteWebDriver){
             factory.setSuperclass(NLRemoteWebDriver.class);
-        } else if (webDriver instanceof HasInputDevices) {
-            factory.setInterfaces(new Class[]{NLHasInputDeviceWebDriver.class});
-        }else {
+        }
+//        else if (webDriver instanceof HasInputDevices) {
+//            factory.setInterfaces(new Class[]{NLHasInputDeviceWebDriver.class});
+//        }
+        else {
             factory.setInterfaces(new Class[]{NLWebDriver.class});
         }
         final NLWebDriver nlWebDriver;

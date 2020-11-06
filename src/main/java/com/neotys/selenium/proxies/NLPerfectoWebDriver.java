@@ -31,11 +31,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.logging.Level;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Capabilities;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.WebDriverException;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Keyboard;
 import org.openqa.selenium.interactions.Mouse;
 import org.openqa.selenium.remote.CommandExecutor;
@@ -507,5 +503,21 @@ public class NLPerfectoWebDriver extends NLRemoteWebDriver{
 	@Override
 	public String getRegexToCleanURLs() {
 		return webDriver.getRegexToCleanURLs();
+	}
+
+	@Override
+	public WebDriver getWrappedDriver() {
+		if(webDriver instanceof WrapsDriver) {
+			return ((WrapsDriver) webDriver).getWrappedDriver();
+		}
+		else {
+			return webDriver;
+		}
+
+	}
+
+	@Override
+	public Capabilities getCapailities() {
+		return remoteWebDriver.getCapabilities();
 	}
 }

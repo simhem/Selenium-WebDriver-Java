@@ -31,6 +31,6 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.internal.WrapsDriver;
 
 public interface NLWebDriver extends WebDriver, CustomProxyConfig, TransactionModifier, JavascriptExecutor, TakesScreenshot, HasCapabilities, WrapsDriver {
-
+    public Capabilities getCapailities();
 }
 

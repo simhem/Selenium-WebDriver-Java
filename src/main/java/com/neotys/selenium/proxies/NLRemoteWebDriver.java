@@ -32,5 +32,5 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 /**
  * Created by anouvel on 15/11/2016.
  */
-public abstract class NLRemoteWebDriver extends RemoteWebDriver implements NLWebDriver{
+public abstract class NLRemoteWebDriver extends RemoteWebDriver implements NLWebDriver {
 }
